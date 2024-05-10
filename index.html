@@ -1,60 +1,208 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xwLEI/6+LBYU2wSHUnG3sFXN1EC8MJ7+uFPLw21fVQq3uq9WrqrXO0o2ZIol/Hb1sfUhEea0P9bmQG0tVlXEEQ==" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/style.css">
-  <title>Iván Longaric Montaño - CV</title>
-</head>
-<body class="darkMode" oncopy="return false">
-  <header class="header">
-      <div class="top-header">
-          <h1>Iván Longaric Montaño</h1>
-      </div>
-  </header>
-  <article class="hero-section">
-      <div class="content">
-          <h1>Fullstack Javascript | Java</h1>
-          <p>
-            Con una formación en Ingeniería de Sistemas en la UTEPSA, Bolivia, he desarrollado habilidades en diversos lenguajes de programación, como C#, JavaScript y Java. Mi enfoque en la integridad, el aprendizaje continuo y la disposición para colaborar me convierten en un valioso activo para cualquier equipo de desarrollo tecnológico. Aunque mi dominio del inglés es de nivel B1, mi capacidad para comunicarme efectivamente en español y mi disposición para seguir aprendiendo me permiten adaptarme a entornos multiculturales y continuar creciendo profesionalmente.</p>
-      </div>
-      <img src="assets/images/yo.png" alt="Imagen Dinámica">
-  </article>
-    <main class="grid-container">
-      <aside class="ad-section">
-          <!-- Contenido de los anuncios aquí -->
-      </aside>
-      <section class="content-section">
-        <h2>Información Personal</h2>
-        <ul class="content-margin">
-          <li><strong>Nombre completo:</strong> Iván Longaric Montaño</li>
-          <li><strong>Nacionalidad:</strong> Boliviana/Española</li>
-          <li><strong>Edad:</strong> 22 años</li>
-        </ul>
-        <h2>Educación y Formación</h2>
-        <p class="content-margin"><strong>Bachiller:</strong>
-          <ul>
-            <li>Colegio San Agustín, Bolivia (2019)</li>
-          </ul>
-        </p>
-        <p class="content-margin"><strong>Universidad:</strong>
-          <ul>
-            <li>Universidad Tecnologica Privada de Santa Cruz de la Sierra "UTEPSA", Bolivia - Ingeniería de Sistemas (7mo semestre)</li>
-          </ul>
-        </p>
-        <h2>Experiencia Laboral</h2>
-        <div class="div-laboral content-margin">
-          <p><strong>Programador de Juegos Indie:</strong> Un año de experiencia en el desarrollo de juegos indie, utilizando herramientas como Unity y GameMaker Studio 2, así como habilidades en JavaScript y C++.</p><img src="assets/images/gamemaker.png" alt="">
-        </div>
-        <div class="div-laboral content-margin">
-          <p><strong>Freelancer: </strong> Durante el período 2021-2022, trabajé como desarrollador freelancer fullstack, ofreciendo soluciones web y de software a microempresas de diversos sectores. Realicé el análisis, diseño, desarrollo, prueba, e implementación de páginas web y programas de inventario y caja, utilizando tecnologías como HTML, CSS, JavaScript, C#, MySQL, SQL Server, entre otras.</p><img src="assets/images/Freelancer.jpg" alt="">
-        </div>
-      </section>
-  </main>
-  <footer class="footer">
-    <p>&copy; 2023 - Iván Longaric Montaño </p>
-  </footer>
-  <script src="js/nav.js" defer></script>
-</body>
+<html lang="en">
+   <head>
+      <link rel="icon" type="image/jpg" href="/assets/images/curriculum_vitae.ico"/>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/style min.css">
+      <title>Iván Longaric Montaño - CV</title>
+   </head>
+   <body class="">
+      <header class="header">
+         <div class="top-header">
+            <h1>Iván Longaric Montaño</h1>
+         </div>
+         <div class="settings">
+            <select name="Idioma" id="Language">
+               <option class="txt-idioma1" value="español">Español</option>
+               <option class="txt-idioma2" value="inglés">Inglés</option>
+            </select>
+            <div class="darkModeToggle" onclick="toggleDarkMode()"></div>
+         </div>
+      </header>
+      <article class="hero-section">
+         <img class="profileImage" src="assets/images/yos.jpeg" alt="Imagen Dinámica">
+         <img class="webImage" src="assets/images/Web.png" alt="web development stack logo">
+         <h1 class="hero-title">Fullstack Web Development Javascript</h1>
+         <h2 class="hero-subtitle1">.NET Developer</h2>
+         <p class="hero-text"></p>
+      </article>
+      <main class="grid-container">
+         <section class="content-section">
+            <h2 class="h2-educacion">Educación y Formación</h2>
+            <div class="container">
+               <div class="card sanagustin">
+                  <img src="assets/images/SanAgustin.png" alt="logo colegio san agustin">
+                  <div class="info">
+                     <span class="colegio">Colegio San Agustín</span>
+                     <br><span class="colegio1">Título: Bachillerato en humanidades.</span>
+                     <br><span class="colegio2">Fecha egreso: 10/2019</span>
+                  </div>
+               </div>
+               <div class="card utepsa">
+                  <img src="assets/images/UTEPSA.jpg" alt="logo utepsa">
+                  <div class="info">
+                     <span class="universidad">Universidad UTEPSA</span>
+                     <br><span class="universidad1">Título: Ingeniería de Sistemas</span>
+                     <br><span class="universidad2">Fecha egreso: 2025 (7mo semestre)</span>
+                  </div>
+               </div>
+            </div>
+            <h2 class="h2-idiomas">Idiomas</h2>
+            <div class="language-container">
+               <div class="language">
+                  <img src="assets/images/Bandera_de_Bolivia_(Estado).png" alt="Español" class="language-flag">
+                  <span class="language-name lespañol">Español</span>
+                  <span class="language-level">(C2)</span>
+               </div>
+               <div class="language">
+                  <img src="assets/images/Flag_of_the_United_States.png" alt="Inglés" class="language-flag">
+                  <span class="language-name lingles">Inglés</span>
+                  <span class="language-level">(B1)</span>
+               </div>
+               <div class="language">
+                  <img src="assets/images/Flag_of_Brazil.png" alt="Portugués-Brasil" class="language-flag">
+                  <span class="language-name lportugues">Portugués</span>
+                  <span class="language-level">(A2)</span>
+               </div>
+            </div>
+            <h2 class="h2-tecnologia">Tecnologías</h2>
+            <div class="technology-table">
+               <div class="technology-category">
+                  <h3 class="h3-lenguajes">Lenguajes</h3>
+                  <div class="technology-container">
+                     <div class="technology">
+                        <img src="assets/images/Csharp.png" alt="C#" class="technology-icon">
+                        <span class="technology-name">C#</span>
+                     </div>
+                     <div class="technology">
+                        <img src="assets/images/Python.png" alt="Python" class="technology-icon">
+                        <span class="technology-name">Python</span>
+                     </div>
+                     <div class="technology">
+                        <img src="assets/images/Java.png" alt="Java" class="technology-icon">
+                        <span class="technology-name">Java</span>
+                     </div>
+                     <div class="technology">
+                        <img src="assets/images/JavaScript-logo.png" alt="Javascript" class="technology-icon">
+                        <span class="technology-name">Javascript</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="technology-category">
+                  <h3 class="h3-frameworks">Frameworks y Librerías</h3>
+                  <div class="technology-container">
+                     <div class="technology">
+                        <img src="assets/images/2560px-Node.js_logo.jpg" alt="Node.js" class="technology-icon">
+                        <span class="technology-name">Node.js</span>
+                     </div>
+                     <div class="technology">
+                        <img src="assets/images/express-js.png" alt="Express.js" class="technology-icon">
+                        <span class="technology-name">Express.js</span>
+                     </div>
+                     <div class="technology">
+                        <img src="assets/images/jquery.jpg" alt="Node.js" class="technology-icon">
+                        <span class="technology-name">Node.js</span>
+                     </div>
+                     <div class="technology">
+                        <img src="assets/images/reactjs.jpg" alt="React.js" class="technology-icon">
+                        <span class="technology-name">React.js</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="technology-category">
+                  <h3 class="h3-herramientas">Herramientas de desarrollo</h3>
+                  <div class="technology-container">
+                     <div class="technology">
+                        <img src="assets/images/visual-studio-code-icon.jpg" alt="Visual Studio Code" class="technology-icon">
+                        <span class="technology-name">Visual Studio Code</span>
+                     </div>
+                     <div class="technology">
+                        <img src="assets/images/visual-studio.jpg" alt="Visual Studio" class="technology-icon">
+                        <span class="technology-name">Visual Studio</span>
+                     </div>
+                     <div class="technology">
+                        <img src="assets/images/postman.png" alt="Postman" class="technology-icon">
+                        <span class="technology-name">Postman</span>
+                     </div>
+                     <div class="technology">
+                        <img src="assets/images/Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop" class="technology-icon">
+                        <span class="technology-name">Photoshop</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="technology-category">
+                  <h3 class="h3-basedatos">Bases de Datos</h3>
+                  <div class="technology-container">
+                     <div class="technology">
+                        <img src="assets/images/MySQL.jpg" alt="MySQL" class="technology-icon">
+                        <span class="technology-name">MySQL</span>
+                     </div>
+                     <div class="technology">
+                        <img src="assets/images/SQLServer.jpg" alt="Microsoft SQL Server" class="technology-icon">
+                        <span class="technology-name">Microsoft SQL Server</span>    
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <h2 class="h2-proyectos">Proyectos</h2>
+            <div class="proyects-section">
+               <div class="proyect">
+                  <img class="top-image" src="assets/images/proyectos/proyecto1-top.jpg" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto1-2.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto1-1.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto1-3.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto1-4.png" alt="">
+               </div>
+               <div class="proyect">
+                  <img class="top-image" src="assets/images/proyectos/proyecto2-top.jpg" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto2-1.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto2-2.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto2-3.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto2-4.png" alt="">
+               </div>
+               <div class="proyect">
+                  <img class="top-image" src="assets/images/proyectos/proyecto3-top.jpg" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto3-1.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto3-2.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto3-3.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto3-4.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto3-5.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto3-6.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto3-7.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto3-8.png" alt="">
+               </div>
+               <div class="proyect">
+                  <img class="top-image" src="assets/images/proyectos/proyecto4-top.jpg" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto4-1.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto4-2.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto4-3.png" alt="">
+                  <img class="image" src="assets/images/proyectos/proyecto4-4.png" alt="">
+               </div>
+            </div>
+            <h2 class="h2-certificaciones">Certificaciones</h2>
+            <div class="certificate-grid">
+               <div class="certificate">
+                  <img class="image" src="assets/images/certificado1.jpg" alt="Certificado de the complete 2023 web development bootcamp">
+               </div>
+               <div class="certificate">
+                  <img class="image" src="assets/images/certificado2.jpg" alt="Certificado de the complete 2023 web development bootcamp">
+               </div>
+               <div class="certificate">
+                  <img class="image" src="assets/images/certificado3.jpg" alt="Certificado de the complete 2023 web development bootcamp">
+               </div>
+            </div>
+            <div id="myModal" class="modal">
+               <span class="close">&times;</span>
+               <img class="modal-content" id="img01">
+               <a class="prev">&#10094;</a>
+               <a class="next">&#10095;</a>
+            </div>
+         </section>
+      </main>
+      <footer class="footer">
+         <p>&copy; 2024 - Iván Longaric Montaño </p>
+      </footer>
+      <script src="js/index min.js" defer></script>
+   </body>
 </html>
