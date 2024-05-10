@@ -3,6 +3,7 @@ const languageJSON = `{
   "español":{
     "hero-text": "Desarrollador Fullstack Javascript y estudiante de ingeniería de sistemas de 7mo semestre con experiencia en C#, Java y edición de videos. Especializado en desarrollo web y programación de videojuegos con Unity y GameMaker Studio 2.",
     "hero-subtitle1": "Desarrollador .NET",
+    "button": "Descargar currículum PDF",
     "txt-idioma1": "Español",
     "txt-idioma2": "Inglés",
     "hero-title": "Desarrollador Full Stack Javascript",
@@ -28,6 +29,7 @@ const languageJSON = `{
   "inglés":{ 
     "hero-text": "Fullstack Javascript developer and 7th semester systems engineering student with experience in C#, Java, and video editing. Specialized in web development and videogame programming with Unity and GameMaker Studio 2.",
     "hero-subtitle1": ".NET Developer",
+    "button": "Download curriculum PDF",
     "txt-idioma1": "Spanish",
     "txt-idioma2": "English",
     "hero-title": "Fullstack Web Development Javascript",
@@ -129,8 +131,12 @@ function toggleDarkMode() {
 
 // Función para cambiar el idioma
 function toggleLanguage() {
-    var idioma = document.getElementById("Language").value.toLowerCase();
-    setLanguage(idioma);
+  var idioma = document.getElementById("Language").value.toLowerCase();
+  var downloadLink = document.getElementById("downloadButton");
+  var curriculumFilename = idioma === "español" ? "Curriculum español.pdf" : "Curriculum english.pdf";
+  var curriculumPath = "assets/" + curriculumFilename;
+  downloadLink.href = curriculumPath;
+  setLanguage(idioma);
 }
 
 // Función para establecer el idioma
@@ -139,6 +145,7 @@ function setLanguage(idioma) {
   heroText.textContent = language[idioma]["hero-text"];
   document.querySelector(".hero-title").textContent = language[idioma]["hero-title"];
   document.querySelector(".hero-subtitle1").textContent = language[idioma]["hero-subtitle1"];
+  document.querySelector(".button").textContent = language[idioma]["button"];
   document.querySelector(".txt-idioma1").textContent = language[idioma]["txt-idioma1"];
   document.querySelector(".txt-idioma2").textContent = language[idioma]["txt-idioma2"];
   document.querySelector(".h2-educacion").textContent = language[idioma]["h2-educacion"];
@@ -176,6 +183,7 @@ function setLanguage(idioma) {
 // Establecer idioma según el atributo "lang" del HTML
 switch (document.documentElement.lang) {
   case "es":
+    document.getElementById("downloadButton").href = "assets/Curriculum español.pdf";
     setLanguage("español"); // Cambiar a "español"
     break;
 
@@ -183,6 +191,7 @@ switch (document.documentElement.lang) {
     document.querySelector(".txt-idioma2").textContent = "English";
     document.getElementById("Language").value = "inglés";
     setLanguage("inglés"); // Cambiar a "inglés"
+    document.getElementById("downloadButton").href = "assets/Curriculum english.pdf";
     break;
 }
 
@@ -206,5 +215,10 @@ laboralDivs.forEach(function(div) {
   });
 });
 
-// Evento para cambiar el idioma al seleccionar uno
+// Establecer el idioma y la ruta de descarga del currículum al cargar la página
+window.onload = function() {
+  toggleLanguage();
+};
+
+// Evento para cambiar el idioma y la ruta de descarga del currículum al seleccionar uno
 document.getElementById("Language").addEventListener("change", toggleLanguage);

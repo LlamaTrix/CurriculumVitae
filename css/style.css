@@ -64,6 +64,31 @@ text-shadow: 0px 3px 0px rgba(33,103,255,0.77), 0px 11px 18px rgba(0,0,0,0.62);
     margin: 0;
 }
 
+.button {
+  position: relative;
+  bottom: 4px;
+  font-size: 15px;
+  display: inline-block;
+  padding: 4px;
+  margin-left: 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #2662a3;
+}
+
+.darkMode .button{
+  background-color: #162031;
+}
+
+.darkMode .button:hover {
+  background-color: #0c1b2b;
+}
+
 .nav {
     display: none;
     flex-flow: column nowrap;

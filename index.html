@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
    <head>
       <link rel="icon" type="image/jpg" href="/assets/images/curriculum_vitae.ico"/>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="css/style min.css">
+      <link rel="stylesheet" href="css/style.css">
       <title>Iván Longaric Montaño - CV</title>
    </head>
    <body class="">
@@ -13,10 +13,11 @@
             <h1>Iván Longaric Montaño</h1>
          </div>
          <div class="settings">
-            <select name="Idioma" id="Language">
+            <select name="Idioma" id="Language" onchange="changeLanguage()">
                <option class="txt-idioma1" value="español">Español</option>
                <option class="txt-idioma2" value="inglés">Inglés</option>
             </select>
+            <a id="downloadButton" class="button" href="assets/Curriculum español.pdf" download="Curriculum.pdf">Descargar currículum PDF</a>
             <div class="darkModeToggle" onclick="toggleDarkMode()"></div>
          </div>
       </header>
@@ -201,9 +202,9 @@
          </section>
       </main>
       <footer class="footer">
-         <p>&copy; 2024 - Iván Longaric Montaño - Teléfono: +591 78644946 </p>
-         <p>Correo: longaricivan@gmail.com</p>
+         <p>&copy; 2024 - Iván Longaric Montaño</p>
+         <p>longaricivan@gmail.com | +591 78644946</p>
       </footer>
-      <script src="js/index min.js" defer></script>
+      <script src="js/index.js" defer></script>
    </body>
 </html>
