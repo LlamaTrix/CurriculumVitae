@@ -51,7 +51,7 @@ font-family: 'GreatVibes';
   color: #dfe1ff;
   font-family: GreatVibes;
   font-weight: 100;
-  font-size: 3vw;
+  font-size: 3em;
 text-shadow: 0px 3px 0px rgba(33,103,255,0.77), 0px 11px 18px rgba(0,0,0,0.62);
 }
 
@@ -113,7 +113,7 @@ text-shadow: 0px 3px 0px rgba(33,103,255,0.77), 0px 11px 18px rgba(0,0,0,0.62);
   box-shadow: 0 0 3.5vw 0 rgba(0, 0, 0, 0.75);
   position: relative;
   color: #fff;
-  padding: 2vw 16.67vw;
+  padding: 2em 16.67vw;
   animation: moveBackground 7s infinite alternate;
 }
 
@@ -154,7 +154,7 @@ text-shadow: 0px 3px 0px rgba(33,103,255,0.77), 0px 11px 18px rgba(0,0,0,0.62);
   opacity: 100%;
   z-index: 10;
   position: absolute;
-  width: 13.33vw;
+  width: 15.33vw;
   top: 19vw;
 }
 
@@ -560,6 +560,7 @@ footer p{
   
 
 @media (max-width: 600px) {
+
   .top-header h1{
     font-weight: 100;
     font-size: 2.3em;
@@ -571,7 +572,7 @@ footer p{
   }
 
   .hero-section {
-    padding: 20px 50px 100px;
+    padding: 20px 50px 30px;
   }
 
   .certificate-grid {
@@ -657,10 +658,18 @@ footer p{
 
   .technology-table {
     grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 0;
   }
 
   .technology-container {
     grid-template-columns: repeat(2,1fr);
+  }
+
+  .technology img{
+    width: 4em;
+    height: 4em;
   }
 
   .proyect{
@@ -674,5 +683,23 @@ footer p{
 
   footer {
     padding: 5px 0;
+  }
+
+  footer p{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+.top-header{
+  padding: 18px;
+}
+
+  .top-header h1{
+    font-size: 2em;
+    }
+
+  footer p{
+    font-size: 13px;
   }
 }
