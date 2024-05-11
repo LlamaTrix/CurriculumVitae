@@ -125,7 +125,7 @@ text-shadow: 0px 3px 0px rgba(33,103,255,0.77), 0px 11px 18px rgba(0,0,0,0.62);
 }
 
 .hero-section {
-  margin-top: 6em;
+  margin-top: 4.9em;
   z-index: 1;
   text-align: center;
   display: flex;
@@ -178,13 +178,14 @@ text-shadow: 0px 3px 0px rgba(33,103,255,0.77), 0px 11px 18px rgba(0,0,0,0.62);
 .hero-section .webImage {
   opacity: 100%;
   z-index: 10;
-  position: absolute;
+  position: relative;
   width: 15.33vw;
-  top: 19vw;
+  top: -4vw;
 }
 
 .hero-title{
 position: relative;
+bottom: 5vw;
 font-size: 4.5vh;
 font-weight: 700;
 margin: 0;
@@ -197,6 +198,8 @@ text-shadow: 0px 3px 0px rgba(33,103,255,0.77), 0px 11px 18px rgba(0,0,0,0.62);
 }
 
 .hero-subtitle1, .hero-subtitle2{
+  position: relative;
+  bottom: 5vw;
   font-size: 3.5vh;
   margin: 0;
   font-weight: 500;
@@ -208,6 +211,8 @@ text-shadow: 0px 3px 0px rgba(33,103,255,0.77), 0px 11px 18px rgba(0,0,0,0.62);
 }
 
   .hero-text{
+    position: relative;
+bottom: 5vw;
   font-size: 3vh;
   font-weight: 400;
 }
@@ -566,6 +571,24 @@ footer p{
 }
 
 @media (max-width: 1024px) {
+  .hero-section {
+    margin-top: 5.5em;
+  }
+
+  .hero-section .profileImage {
+    margin-top: 2em;
+    width: 20.67vw;
+  }
+  
+  .card {
+    width: 40vh;
+    height: 30vh;
+  }
+
+  .card img {
+    width: 70%;
+  }
+
   .technology-table {
     grid-template-columns: 1fr;
   }
@@ -593,11 +616,30 @@ footer p{
 
   .hero-section .webImage{
     width: 150px;
-    top: 25vh;
+    top: -4vh;
   }
 
   .hero-section {
-    padding: 20px 50px 30px;
+    padding: 20px 50px 45px;
+  }
+
+  .hero-title{
+    position: relative;
+    bottom: 8vw;
+  }
+
+  .hero-subtitle1{
+    position: relative;
+    bottom: 8vw;
+  }
+
+  .hero-text{
+    position: relative;
+    bottom: 8vw;
+  }
+
+  .info {
+    height: 100px;
   }
 
   .certificate-grid {
@@ -720,11 +762,38 @@ footer p{
   padding: 18px;
 }
 
+.hero-title{
+  font-size: 20px;
+}
+
+.hero-section{
+  padding: 20px 50px 90px;
+}
+
   .top-header h1{
-    font-size: 2em;
+    font-size: 1.8em;
     }
 
   footer p{
     font-size: 13px;
   }
 }
+
+@media (max-width: 350px) {
+  
+  .hero-title{
+    font-size: 20px;
+  }
+  
+  .hero-section{
+    padding: 20px 50px 135px;
+  }
+  
+    .top-header h1{
+      font-size: 1.6em;
+      }
+  
+    footer p{
+      font-size: 13px;
+    }
+  }
